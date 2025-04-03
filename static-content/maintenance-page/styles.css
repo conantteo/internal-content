@@ -1,0 +1,80 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%; /* Fill the entire viewport */
+  width: 100%; /* Fill the entire viewport */
+}
+
+.content {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: clamp(20px, 2vw, 30px); /* Responsive padding */
+  
+  /* Ensure content does not exceed viewport */
+  width: 90vw; 
+  height: 90vh; 
+
+  /* Center content and allow it to scale dynamically */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+  word-wrap: break-word;
+}
+
+.maintenance-gif {
+  max-width: 90%; /* Maximum width is set to be within content */
+  max-height: 80%; /* Maximum height is set to be within content */
+  
+  object-fit: contain; /* Ensure it scales proportionally without overflow */
+}
+
+h1 {
+  font-size: clamp(1.5rem, 2vw, 2.5rem); /* Responsive font size */
+}
+
+.description {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.button-group {
+  margin-top: 20px;
+}
+
+.btn {
+  background-color: #007bff; /* Primary blue color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  font-size: .9rem;
+}
+
+.btn:hover {
+   background:#0056b3;
+}
